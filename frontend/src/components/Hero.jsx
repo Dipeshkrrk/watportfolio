@@ -1,7 +1,23 @@
 import { motion } from "framer-motion";
 import { Button } from "./ui/button";
+import { useRef } from "react";
 
 export default function Hero() {
+  const portfolioRef = useRef(null);  // Create a reference for the portfolio section
+
+  // Scroll to section function
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
+  const handleClick = (e) => {
+    e.preventDefault(); // Prevent default action
+    scrollToSection("portfolio"); // Scroll to the portfolio section
+  };
+
   return (
     <section 
       id="hero" 
@@ -24,7 +40,10 @@ export default function Hero() {
         Web Design with an Edge
       </motion.p>
       <motion.div whileHover={{ scale: 1.05 }}>
-        <Button onClick={() => scrollToSection("portfolio")} className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-3 text-lg rounded-2xl">
+        <Button
+          onClick={handleClick} // Use the defined handleClick
+          className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-3 text-lg rounded-2xl"
+        >
           See Our Work
         </Button>
       </motion.div>
