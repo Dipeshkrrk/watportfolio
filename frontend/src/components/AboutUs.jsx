@@ -13,7 +13,7 @@ export default function AboutUs() {
           transition={{ duration: 1 }}
         >
           <img 
-            src="src\assets\Logo.png" 
+            src="https://i.postimg.cc/RhnvJnVk/Logo.png" 
             alt="WAT Logo" 
             className="w-64 md:w-80 drop-shadow-2xl"
           />

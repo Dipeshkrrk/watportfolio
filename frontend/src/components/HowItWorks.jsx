@@ -30,7 +30,7 @@ export default function HowItWorks() {
         {/* Image + Title Side */}
         <div className="lg:w-1/2 w-full space-y-6 text-center lg:text-left">
           <img
-            src="src\assets\your-image.jpg"
+            src="https://i.postimg.cc/ryvrn1Wt/your-image.jpg"
             alt="Process"
             className="w-full h-auto rounded-3xl object-cover shadow-lg"
           />
