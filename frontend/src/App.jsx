@@ -55,7 +55,7 @@ export default function App() {
 
       {/* Content Wrapper */}
       <div className="relative z-10 text-white font-sans min-h-screen">
-        {/* Navigation */}
+{/* Navigation */}
 <nav className="backdrop-blur-lg bg-zinc-950/80 border-b border-zinc-800 sticky top-0 z-50 shadow-md">
   <div className="flex justify-between items-center px-6 md:px-16 py-4">
     <h1
@@ -101,8 +101,8 @@ export default function App() {
             key={section}
             className="hover:text-white cursor-pointer transition"
             onClick={() => {
-              scrollToSection(section);
-              setMenuOpen(false);
+              scrollToSection(section);   // Call scrollToSection
+              setMenuOpen(false);          // Close the menu after scroll
             }}
           >
             {section.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase())}
@@ -112,6 +112,7 @@ export default function App() {
     )}
   </AnimatePresence>
 </nav>
+
 
         <Hero/>
         {/* About */}
