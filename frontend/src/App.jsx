@@ -55,8 +55,7 @@ export default function App() {
 
       {/* Content Wrapper */}
       <div className="relative z-10 text-white font-sans min-h-screen">
-{/* Navigation */}
-<nav className="backdrop-blur-lg bg-zinc-950/80 border-b border-zinc-800 sticky top-0 z-50 shadow-md">
+      <nav className="backdrop-blur-lg bg-zinc-950/80 border-b border-zinc-800 sticky top-0 z-50 shadow-md">
   <div className="flex justify-between items-center px-6 md:px-16 py-4">
     <h1
       className="text-3xl font-bold text-purple-500 cursor-pointer tracking-widest"
@@ -97,22 +96,24 @@ export default function App() {
         className="md:hidden flex flex-col gap-4 text-center py-4 bg-zinc-950 text-gray-300 border-t border-zinc-800"
       >
         {["about", "services", "portfolio", "how-it-works", "contact"].map((section) => (
-          <li
+          <motion.li
             key={section}
             className="hover:text-white cursor-pointer transition"
-            onClick={() => {
-              scrollToSection(section);   // Call scrollToSection
-              setMenuOpen(false);          // Close the menu after scroll
+            onClick={(e) => {
+              e.preventDefault(); // Prevent default action to avoid interference
+              setMenuOpen(false); // Close menu
+              setTimeout(() => { // Add a small delay to ensure the menu closes after scroll
+                scrollToSection(section); // Call scroll function after closing the menu
+              }, 300); // Delay is equal to animation duration
             }}
           >
             {section.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase())}
-          </li>
+          </motion.li>
         ))}
       </motion.ul>
     )}
   </AnimatePresence>
 </nav>
-
 
         <Hero/>
         {/* About */}
