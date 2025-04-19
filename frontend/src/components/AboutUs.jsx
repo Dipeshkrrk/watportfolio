@@ -27,7 +27,7 @@ export default function AboutUs() {
         >
           <h2 className="text-4xl font-bold mb-4 text-purple-300">About Us</h2>
           <p className="text-lg leading-relaxed text-gray-300">
-            At <span className="text-purple-400 font-semibold">WAT</span>, we blend innovation with magic. 
+            At <span className="text-purple-400 font-semibold">wAt</span>, we blend innovation with magic. 
             Our goal is to create impactful solutions with a touch of wonder—where technology meets imagination. 
             Whether it's transforming ideas into powerful applications or designing seamless experiences, 
             we’re here to build the future, one magical moment at a time.
