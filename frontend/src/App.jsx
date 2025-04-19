@@ -8,6 +8,9 @@ import MarqueeText from "./components/Marquee";
 import watBg from "./assets/watBackground.png";
 import AboutUs from "./components/AboutUs";
 import Hero from "./components/Hero";
+import PortfolioSection from "./components/Portfolio";
+import ContactSection from "./components/Contact";
+import ServicesSection from "./components/ServicesSection";
 
 const services = [
   { name: "UX/UI Design", icon: "📱" },
@@ -15,8 +18,6 @@ const services = [
   { name: "Web Development", icon: "💻" },
   { name: "Prototyping", icon: "🎯" },
 ];
-
-const portfolioItems = ["Project One", "Project Two", "Project Three", "Project Four"];
 
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -120,124 +121,18 @@ export default function App() {
         <AboutUs/>
 
         {/* Services */}
-<section
-  id="services"
-  className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 px-6 md:px-16 py-16 bg-black"
->
-  {services.map((service, index) => (
-    <motion.div
-      key={service.name}
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ delay: index * 0.2 }}
-      whileHover={{ scale: 1.05 }}
-      viewport={{ once: true }}
-    >
-      {/* Outer glow only on hover */}
-      <div className="relative rounded-2xl transition duration-300 hover:shadow-[0_0_20px_4px_rgba(139,92,246,0.4)]">
-        {/* Gradient border wrapper */}
-        <div className="rounded-2xl p-[2px] bg-gradient-to-r from-blue-500 to-purple-500">
-          {/* Inner card */}
-          <div className="rounded-2xl bg-zinc-900 text-white p-6 h-full flex flex-col items-center justify-center text-center hover:bg-zinc-800 transition duration-300">
-            <div className="text-4xl mb-4 text-purple-400">{service.icon}</div>
-            <h3 className="text-lg font-semibold">{service.name}</h3>
-          </div>
-        </div>
-      </div>
-    </motion.div>
-  ))}
-</section>
+<ServicesSection/>
 
 
-        {/* Portfolio */}
-<section id="portfolio" className="px-6 md:px-16 py-16 bg-black">
-  <motion.h2
-    initial={{ opacity: 0, y: -30 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.6 }}
-    viewport={{ once: true }}
-    className="text-4xl font-bold mb-8 text-purple-300"
-  >
-    Portfolio
-  </motion.h2>
-
-  <motion.div
-    className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4"
-    initial="hidden"
-    whileInView="visible"
-    variants={{
-      hidden: {},
-      visible: {
-        transition: {
-          staggerChildren: 0.15,
-        },
-      },
-    }}
-    viewport={{ once: true }}
-  >
-    {portfolioItems.map((item, idx) => (
-      <motion.div
-        key={idx}
-        variants={{
-          hidden: { opacity: 0, y: 30 },
-          visible: { opacity: 1, y: 0 },
-        }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
-        whileHover={{ scale: 1.05 }}
-        className="bg-zinc-800 aspect-square rounded-xl flex items-center justify-center text-purple-300 text-lg font-semibold transition"
-      >
-        {item}
-      </motion.div>
-    ))}
-  </motion.div>
-</section>
-
-        {/* Marquee */}
-<MarqueeText />
+       {/* Portfolio */}
+<PortfolioSection/>
 
         {/* How It Works */}
         <HowItWorks />
-
+{/* Marquee */}
+<MarqueeText />
         {/* Contact */}
-        <section id="contact" className="px-6 md:px-16 py-16 text-center">
-          <h2 className="text-purple-400 uppercase text-xl mb-6">Get In Touch</h2>
-          {submitted ? (
-            <p className="text-green-400">Thanks for your message! We'll get back to you soon.</p>
-          ) : (
-            <form onSubmit={handleSubmit} className="max-w-xl mx-auto space-y-4">
-              <input
-                type="text"
-                name="name"
-                placeholder="Your Name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-                className="w-full px-4 py-2 bg-zinc-800 border border-zinc-700 rounded-xl text-white focus:outline-none focus:border-purple-500"
-              />
-              <input
-                type="email"
-                name="email"
-                placeholder="Your Email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                className="w-full px-4 py-2 bg-zinc-800 border border-zinc-700 rounded-xl text-white focus:outline-none focus:border-purple-500"
-              />
-              <textarea
-                name="message"
-                placeholder="Your Message"
-                rows="4"
-                value={formData.message}
-                onChange={handleChange}
-                required
-                className="w-full px-4 py-2 bg-zinc-800 border border-zinc-700 rounded-xl text-white focus:outline-none focus:border-purple-500"
-              />
-              <Button type="submit" className="bg-purple-600 hover:bg-purple-500 text-white px-6 py-2 rounded-xl">
-                Send Message
-              </Button>
-            </form>
-          )}
-        </section>
+        <ContactSection/>
 
         {/* Footer */}
         <footer className="bg-zinc-900 py-6 text-center text-gray-500">
