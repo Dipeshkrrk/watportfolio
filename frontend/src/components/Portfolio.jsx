@@ -2,32 +2,32 @@ import { motion } from "framer-motion";
 
 const portfolioItems = [
   {
-    image: "src/assets/projects/a5motors.png",
+    image: "https://i.ibb.co/vCX2Nyq7/a5motors.png",
     title: "A5 Motors",
     link: "https://www.a5motors.in/",
   },
   {
-    image: "src/assets/projects/nvfithub.png",
+    image: "https://i.ibb.co/Y4gZWDTs/nvfithub.png",
     title: "NV Fit Hub",
     link: "https://www.nvfithub.com/",
   },
   {
-    image: "src/assets/projects/b4tutorial.png",
+    image: "https://i.ibb.co/qYz72tV8/b4tutorial.png",
     title: "B4 Tutorial",
     link: "https://www.b4tutorial.in/",
   },
   {
-    image: "src/assets/projects/jhgroup.png",
+    image: "https://i.ibb.co/4Rd8X7qh/jhgroup.png",
     title: "JH Groups",
     link: "https://www.jhgroups.in/",
   },
   {
-    image: "src/assets/projects/k2kvacations.png",
+    image: "https://i.ibb.co/F4qqTTfD/k2kvacations.png",
     title: "K2K Vacations",
     link: "https://k2kvacations.in",
   },
   {
-    image: "src/assets/projects/thelearningbuds.png",
+    image: "https://i.ibb.co/NgqcKLN6/thelearningbuds.png",
     title: "The Learning Buds",
     link: "https://www.thelearningbuds.com",
   },
