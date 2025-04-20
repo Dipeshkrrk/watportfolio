@@ -31,7 +31,8 @@ export default function HowItWorks() {
         <div className="lg:w-1/2 w-full space-y-6 text-center lg:text-left">
           <img
             // src="https://i.postimg.cc/ryvrn1Wt/your-image.jpg"
-            src="https://i.postimg.cc/Hx4nxYrC/digital-art-style-illustration-graphic-designer.jpg"
+            // src="https://i.postimg.cc/Hx4nxYrC/digital-art-style-illustration-graphic-designer.jpg"
+            src="https://i.postimg.cc/pV5xqXWV/illus.png"
             alt="Process"
             className="w-full h-auto rounded-3xl object-cover shadow-lg"
           />
