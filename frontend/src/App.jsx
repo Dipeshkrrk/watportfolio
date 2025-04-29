@@ -11,6 +11,7 @@ import Hero from "./components/Hero";
 import PortfolioSection from "./components/Portfolio";
 import ContactSection from "./components/Contact";
 import ServicesSection from "./components/ServicesSection";
+import AnimatedWave from "./components/ui/AnimatedWave";
 
 const services = [
     {
@@ -156,6 +157,7 @@ export default function App() {
                 </nav>
 
                 <Hero/>
+                {/* <AnimatedWave/> */}
                 <AboutUs/>
                 <ServicesSection/>
                 <PortfolioSection/>
